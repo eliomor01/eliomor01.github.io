@@ -182,15 +182,10 @@
             </div>
             <div class="content has-text-justified">
               <p>
-                <strong>TL;DR</strong> This paper introduces a string-method view of diffusion models
-                to study how samples are connected through the learned distribution. Rather than relying
-                on simple interpolations, it computes paths shaped by the score model and compares three
-                regimes: generative transport, minimum energy paths, and entropy-aware or tension-regularized paths.
-              </p>
-              <p>
-                The main takeaway is that geometry matters. In images, high-likelihood paths can still look unrealistic,
-                while entropy-aware paths remain much closer to the typical set. In proteins, the same framework yields
-                physically plausible conformational transitions from models trained only on static structures.
+                <strong>TL;DR</strong> We apply the string method to pretrained diffusion models to compute meaningful paths between samples -- without retraining.
+                We compare three path constructions -- generative transport, minimum energy paths (MEPs), and entropy-aware paths -- and argue that the right choice depends on what you care about: morphing, likelihood, or geometry.
+                Our main finding is that entropy matters in high dimension: MEPs can pass through high-likelihood but visually implausible images, while entropy-aware paths stay close to the typical set and produce realistic transitions.
+                For proteins, the framework yields conformational pathways from models trained only on static structures -- and projections onto TICs confirm these paths are physically plausible.
               </p>
             </div>
           </div>
@@ -205,31 +200,22 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Understanding the geometry of learned distributions is fundamental to improving and
-                interpreting diffusion models, yet systematic tools for exploring their landscape remain limited.
-              </p>
-              <p>
-                Standard latent-space interpolations fail to respect the structure of the learned distribution,
-                often traversing low-density regions.
-              </p>
-              <p>
-                We introduce a framework based on the string method that computes continuous paths between
-                samples by evolving curves under the learned score function. Operating on pretrained models
+                Understanding the geometry of learned distributions is fundamental to improving and interpreting
+                diffusion models, yet systematic tools for exploring their landscape remain limited. Standard latent-
+                space interpolations fail to respect the structure of the learned distribution, often traversing low-density
+                regions. We introduce a framework based on the string method that computes continuous paths
+                between samples by evolving curves under the learned score function. Operating on pretrained models
                 without retraining, our approach interpolates between three regimes: pure generative transport,
-                which yields continuous sample paths; gradient-dominated dynamics, which recover minimum energy
-                paths (MEPs); and finite-temperature string dynamics, which compute principal curves that balance
-                energy and entropy.
-              </p>
-              <p>
-                For image diffusion models, MEPs contain high-likelihood but unrealistic “cartoon” images,
-                while principal curves yield realistic morphing sequences despite lower likelihood. For protein
-                structure prediction, the method computes transition pathways between metastable conformers
-                directly from models trained on static structures, producing plausible intermediates.
-              </p>
-              <p>
-                Altogether, the paper establishes the string method as a principled tool for probing the modal
-                structure of diffusion models, identifying modes, characterizing barriers, and mapping connectivity
-                in complex learned distributions.
+                which yields continuous sample paths; gradient-dominated dynamics, which recover minimum
+                energy paths (MEPs); and finite-temperature string dynamics, which compute principal curves—self-
+                consistent paths that balance energy and entropy. We demonstrate that the choice of regime matters
+                in practice. For image diffusion models, MEPs contain high-likelihood but unrealistic “cartoon”
+                images, confirming prior observations that likelihood maxima appear unrealistic; principal curves
+                instead yield realistic morphing sequences despite lower likelihood. For protein structure prediction,
+                our method computes transition pathways between metastable conformers directly from models
+                trained on static structures, yielding paths with physically plausible intermediates. Together, these
+                results establish the string method as a principled tool for probing the modal structure of diffusion
+                models—identifying modes, characterizing barriers, and mapping connectivity in complex learned distributions.
               </p>
             </div>
           </div>
@@ -242,19 +228,13 @@
             <h2 class="title is-3">Key Contributions</h2>
             <div class="content has-text-justified">
               <p>
-                We adapt the string method from computational chemistry to the setting of learned score functions,
-                making it possible to compute pathways directly from pretrained diffusion models without requiring
-                an explicit energy function.
+                We adapt the string method from computational chemistry to work with learned score functions, enabling pathway computation from pretrained generative models without explicit energy functions -- and without any retraining or fine-tuning.
               </p>
               <p>
-                We compare three complementary regimes: pure transport for generative paths, gradient-dominated
-                dynamics for minimum energy paths, and finite-temperature or tension-regularized dynamics for paths that
-                better reflect the typical set.
+                We show how three choices of dynamics -- pure transport, gradient-dominated, and finite-temperature -- reveal complementary aspects of the learned landscape, each suited to a different notion of transition.
               </p>
               <p>
-                We show empirically that entropy matters in high dimension. This is visible both in image morphing,
-                where MEPs can pass through unrealistic samples, and in proteins, where geometry-aware paths lead to
-                smoother and more physically meaningful transitions.
+                We demonstrate that accounting for entropy is essential for realistic pathways in high dimensions: principal curves traverse the typical set while MEPs do not. We illustrate this on image morphing and protein conformational transitions, where projections onto TICs confirm the physical plausibility of the entropy-aware paths.
               </p>
             </div>
           </div>
