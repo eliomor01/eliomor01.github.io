@@ -53,7 +53,8 @@ Affiliations:
 ├── static/
 │   ├── css/              # Stylesheets (Bulma, custom styles)
 │   ├── js/               # JavaScript utilities
-│   └── images/           # Figures and assets (e.g., teaser image)
+|   ├── videos/           # Videos
+│   └── images/           # Figures
 ```
 
 
