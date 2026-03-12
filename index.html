@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Project page for Probing the Geometry of Diffusion Models with the String Method."
+    />
+    <meta
+      name="keywords"
+      content="Diffusion Models, String Method, Minimum Energy Path, Protein Transitions, Generative Models"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Embedd LateX dans ce fichier HTML-->
+    <!-- <script defer src="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js)"></script> -->
+    <!-- KaTeX for LaTeX rendering -->
+    <link
+      rel="stylesheet"
+      href="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css)"
+      integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js)"
+      integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js)"
+      integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });"
+    ></script>
+
+    <title>Probing the Geometry of Diffusion Models with the String Method</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="[googletagmanager.com](https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL)"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+      gtag("config", "G-PYVRSFMDRL");
+    </script>
+
+    <!--Add an icon on the navigator tab-->
+    <link rel="icon" href="./static/images/cat.PNG" />
+
+    <!-- Import CSS files -->
+    <link
+      href="[fonts.googleapis.com](https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro)"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="[cdn.jsdelivr.net](https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css)"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+
+    <script src="[ajax.googleapis.com](https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js)"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column is-four-fifths has-text-centered">
+              <h1 class="title is-1 publication-title">
+                Probing the Geometry of Diffusion Models with the String Method
+              </h1>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Elio Moreau<sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="[florentincdx.github.io](https://florentincdx.github.io/)" target="_blank">Florentin Coeurdoux</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="[sites.google.com](https://sites.google.com/view/gferre/accueil)" target="_blank">Grégoire Ferré</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="[wp.nyu.edu](https://wp.nyu.edu/courantinstituteofmathematicalsciences-eve2/)" target="_blank">Eric Vanden-Eijnden</a><sup>1, 2</sup>
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>Capital Fund Management</span>
+                <span class="author-block"><sup>2</sup>Courant Institute of Mathematical Sciences, New York University, New York</span>
+              </div>
+              <!--
+              <div class="has-text-centered" style="margin-top: 1.5em">
+                <span class="tag is-info is-medium">ICML 2026</span>
+              </div>
+              -->
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a
+                      href="[arxiv.org](https://arxiv.org/pdf/2602.22122.pdf)"
+                      class="external-link button is-normal is-rounded is-dark"
+                      target="_blank"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a
+                      href="[arxiv.org](https://arxiv.org/abs/2602.22122)"
+                      class="external-link button is-normal is-rounded is-dark"
+                      target="_blank"
+                    >
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+
+                  <!-- Uncomment if you want to add a code repo later -->
+                  <!--
+                  <span class="link-block">
+                    <a
+                      href="[github.com](https://github.com/your-repo)"
+                      class="external-link button is-normal is-rounded is-dark"
+                      target="_blank"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths has-text-centered">
+            <div class="imgContainer" style="margin-bottom: 30px">
+              <img
+                src="static/images/teaser.png"
+                alt="Teaser figure for Probing the Geometry of Diffusion Models with the String Method"
+                height="80%"
+                width="80%"
+                style="position: relative; transform: translateY(12px)"
+              />
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                <strong>TL;DR</strong> This paper introduces a string-method view of diffusion models
+                to study how samples are connected through the learned distribution. Rather than relying
+                on simple interpolations, it computes paths shaped by the score model and compares three
+                regimes: generative transport, minimum energy paths, and entropy-aware or tension-regularized paths.
+              </p>
+              <p>
+                The main takeaway is that geometry matters. In images, high-likelihood paths can still look unrealistic,
+                while entropy-aware paths remain much closer to the typical set. In proteins, the same framework yields
+                physically plausible conformational transitions from models trained only on static structures.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop" style="margin-bottom: 100px">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Understanding the geometry of learned distributions is fundamental to improving and
+                interpreting diffusion models, yet systematic tools for exploring their landscape remain limited.
+              </p>
+              <p>
+                Standard latent-space interpolations fail to respect the structure of the learned distribution,
+                often traversing low-density regions.
+              </p>
+              <p>
+                We introduce a framework based on the string method that computes continuous paths between
+                samples by evolving curves under the learned score function. Operating on pretrained models
+                without retraining, our approach interpolates between three regimes: pure generative transport,
+                which yields continuous sample paths; gradient-dominated dynamics, which recover minimum energy
+                paths (MEPs); and finite-temperature string dynamics, which compute principal curves that balance
+                energy and entropy.
+              </p>
+              <p>
+                For image diffusion models, MEPs contain high-likelihood but unrealistic “cartoon” images,
+                while principal curves yield realistic morphing sequences despite lower likelihood. For protein
+                structure prediction, the method computes transition pathways between metastable conformers
+                directly from models trained on static structures, producing plausible intermediates.
+              </p>
+              <p>
+                Altogether, the paper establishes the string method as a principled tool for probing the modal
+                structure of diffusion models, identifying modes, characterizing barriers, and mapping connectivity
+                in complex learned distributions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop" style="margin-bottom: 100px">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Key Contributions</h2>
+            <div class="content has-text-justified">
+              <p>
+                We adapt the string method from computational chemistry to the setting of learned score functions,
+                making it possible to compute pathways directly from pretrained diffusion models without requiring
+                an explicit energy function.
+              </p>
+              <p>
+                We compare three complementary regimes: pure transport for generative paths, gradient-dominated
+                dynamics for minimum energy paths, and finite-temperature or tension-aware dynamics for paths that
+                better reflect the typical set.
+              </p>
+              <p>
+                We show empirically that entropy matters in high dimension. This is visible both in image morphing,
+                where MEPs can pass through unrealistic samples, and in proteins, where geometry-aware paths lead to
+                smoother and more physically meaningful transitions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr
+        style="
+          border: 1px solid black;
+          background: black;
+          border: none;
+          margin-left: 27%;
+          margin-right: 27%;
+        "
+      />
+
+      <hr
+        style="
+          border: 1px solid black;
+          background: black;
+          border: none;
+          margin-left: 27%;
+          margin-right: 27%;
+        "
+      />
+
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h1 class="title is-2 has-text-centered">Images</h1>
+          <p class="has-text-justified">
+            The following figures highlight two central messages of the paper.
+            First, likelihood alone does not necessarily correspond to realistic samples.
+            Second, finite-temperature string dynamics can reveal a more meaningful path through the typical set,
+            and this leads naturally to principal curves that balance energy and entropy.
+          </p>
+        </div>
+      </div>
+
+      <div class="columns is-centered" style="margin-bottom: 4%">
+        <div class="column is-four-fifths">
+          <div class="has-text-centered">
+            <img
+              src="static/images/likelihood_and_realism.png"
+              alt="Relationship between likelihood and realism"
+              style="border-radius: 8px; width: 100%;"
+            />
+          </div>
+          <div class="content has-text-justified" style="margin-top: 1rem;">
+            <p>
+              This figure illustrates the relationship between likelihood and realism in diffusion models.
+              A central observation of the paper is that minimum energy paths can pass through states that are
+              highly likely under the model but still appear unrealistic or overly cartoon-like.
+              In contrast, more entropy-aware paths remain closer to the typical set and produce visually more plausible transitions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered" style="margin-bottom: 5%">
+        <div class="column is-four-fifths">
+          <div class="has-text-centered">
+            <img
+              src="static/images/finite_T_goose.png"
+              alt="Finite-temperature walkers and principal curve"
+              style="border-radius: 8px; width: 100%;"
+            />
+          </div>
+          <div class="content has-text-justified" style="margin-top: 1rem;">
+            <p>
+              This figure shows finite-temperature walkers together with the principal curve they define.
+              Rather than focusing only on an energy-minimizing route, the finite-temperature dynamics explore a broader region
+              of likely configurations and capture the geometry of the typical set.
+              The resulting principal curve provides a self-consistent pathway that better balances energy and entropy.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h1 class="title is-2 has-text-centered">Protein Transition Videos</h1>
+          <p class="has-text-justified">
+            The following videos compare three kinds of paths between endpoint conformations:
+            a diffusion-model string, a minimum energy path, and a tension-regularized path.
+            The comparison is shown for both the BBA protein and chignolin.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4 has-text-centered">Chignolin</h2>
+        </div>
+      </div>
+
+            <div class="columns is-centered" style="margin-bottom: 3%">
+        <div class="column is-four-fifths">
+          <div class="columns is-multiline">
+            <div class="column is-6">
+              <div class="has-text-centered">
+                <img
+                  src="static/images/chi_projection.png"
+                  alt="Projection of the chignolin path"
+                  style="border-radius: 8px; width: 100%;"
+                />
+              </div>
+              <div class="content has-text-justified" style="margin-top: 1rem;">
+                <p>
+                  This figure shows a projection of the chignolin transition path.
+                  The projection provides a compact view of how the pathway moves through configuration space
+                  and helps compare the geometry of the diffusion-model string with the more energy-driven alternatives.
+                </p>
+              </div>
+            </div>
+
+            <div class="column is-6">
+              <div class="has-text-centered">
+                <img
+                  src="static/images/chi_energy.png"
+                  alt="Energy along the chignolin path"
+                  style="border-radius: 8px; width: 100%;"
+                />
+              </div>
+              <div class="content has-text-justified" style="margin-top: 1rem;">
+                <p>
+                  This figure shows the energy profile along the chignolin path.
+                  It helps identify barriers and favorable intermediate regions,
+                  and it makes the differences between the three path constructions easier to interpret quantitatively.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="columns is-centered is-multiline" style="margin-bottom: 5%">
+        <div class="column is-4">
+          <div class="has-text-centered">
+            <video
+              autoplay
+              controls
+              muted
+              loop
+              playsinline
+              style="width: 100%; border-radius: 8px;"
+            >
+              <source src="./static/videos/chi_init.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="content has-text-justified" style="margin-top: 1rem;">
+            <p>
+              This video presents a diffusion-generated string for chignolin. It visualizes the transition proposed by
+              the learned model and shows how the path evolves through plausible intermediate states.
+            </p>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="has-text-centered">
+            <video
+              autoplay
+              controls
+              muted
+              loop
+              playsinline
+              style="width: 100%; border-radius: 8px;"
+            >
+              <source src="./static/videos/chi_mep.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="content has-text-justified" style="margin-top: 1rem;">
+            <p>
+              This video shows the minimum energy path for chignolin. It provides a direct comparison with the
+              diffusion-based trajectory and highlights the differences between purely energetic and geometry-aware paths.
+            </p>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="has-text-centered">
+            <video
+              autoplay
+              controls
+              muted
+              loop
+              playsinline
+              style="width: 100%; border-radius: 8px;"
+            >
+              <source src="./static/videos/chi_tension.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="content has-text-justified" style="margin-top: 1rem;">
+            <p>
+              This video shows the tension-regularized path for chignolin. The regularization encourages a smoother
+              evolution of the string and makes the sequence of intermediates easier to interpret visually.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4 has-text-centered">BBA</h2>
+        </div>
+      </div>
+
+            <div class="columns is-centered" style="margin-bottom: 3%">
+        <div class="column is-four-fifths">
+          <div class="columns is-multiline">
+            <div class="column is-6">
+              <div class="has-text-centered">
+                <img
+                  src="static/images/bba_projection.png"
+                  alt="Projection of the BBA path"
+                  style="border-radius: 8px; width: 100%;"
+                />
+              </div>
+              <div class="content has-text-justified" style="margin-top: 1rem;">
+                <p>
+                  This figure shows a projection of the BBA transition path in a reduced representation.
+                  It helps visualize how the different string constructions move between the endpoint conformations
+                  and whether the transition follows a smooth geometric route through configuration space.
+                </p>
+              </div>
+            </div>
+
+            <div class="column is-6">
+              <div class="has-text-centered">
+                <img
+                  src="static/images/bba_energy.png"
+                  alt="Energy along the BBA path"
+                  style="border-radius: 8px; width: 100%;"
+                />
+              </div>
+              <div class="content has-text-justified" style="margin-top: 1rem;">
+                <p>
+                  This figure reports the energy along the BBA path.
+                  It gives a complementary view of the transition by showing where energetic barriers and low-energy regions appear,
+                  making it easier to compare diffusion-generated strings, minimum energy paths, and tension-regularized paths.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="columns is-centered is-multiline" style="margin-bottom: 3%">
+        <div class="column is-4">
+          <div class="has-text-centered">
+            <video
+              autoplay
+              controls
+              muted
+              loop
+              playsinline
+              style="width: 100%; border-radius: 8px;"
+            >
+              <source src="./static/videos/bba_init.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="content has-text-justified" style="margin-top: 1rem;">
+            <p>
+              This video shows the BBA transition generated directly by the diffusion-model string. It gives a clear
+              picture of how the learned score connects the endpoints while staying aligned with the geometry of the model.
+            </p>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="has-text-centered">
+            <video
+              autoplay
+              controls
+              muted
+              loop
+              playsinline
+              style="width: 100%; border-radius: 8px;"
+            >
+              <source src="./static/videos/bba_mep.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="content has-text-justified" style="margin-top: 1rem;">
+            <p>
+              This video shows the minimum energy path for BBA. It emphasizes the route favored by energy-dominated
+              dynamics and is useful for understanding how the pathway changes when entropy is not explicitly accounted for.
+            </p>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="has-text-centered">
+            <video
+              autoplay
+              controls
+              muted
+              loop
+              playsinline
+              style="width: 100%; border-radius: 8px;"
+            >
+              <source src="./static/videos/bba_tension.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="content has-text-justified" style="margin-top: 1rem;">
+            <p>
+              This video shows the BBA path with tension regularization. The added tension makes the string evolve more
+              smoothly and often produces a more evenly distributed sequence of intermediate conformations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr
+      style="
+        border: 1px solid black;
+        background: black;
+        border: none;
+        margin-left: 27%;
+        margin-right: 27%;
+      "
+    />
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h1 class="title is-2 has-text-centered">Theoretical Framework</h1>
+
+        <p
+          style="
+            background-color: #f0f8ff;
+            padding: 1em;
+            border-left: 4px solid #2970cc;
+            margin: 1em 0;
+          "
+        >
+          <b>Pure generative transport</b><br />
+          In this regime, the string evolves according to the generative dynamics induced by the learned score model.
+          The resulting path gives a continuous transport between endpoints and reveals how the model naturally connects samples.
+        </p>
+
+        <p
+          style="
+            background-color: #f0f8ff;
+            padding: 1em;
+            border-left: 4px solid #2970cc;
+            margin: 1em 0;
+          "
+        >
+          <b>Gradient-dominated dynamics</b><br />
+          When the dynamics are dominated by the gradient component, the method recovers minimum energy paths.
+          These paths can expose barriers and high-likelihood routes, but in high dimension they may drift toward unrealistic regions.
+        </p>
+
+        <p
+          style="
+            background-color: #f0f8ff;
+            padding: 1em;
+            border-left: 4px solid #2970cc;
+            margin: 1em 0;
+          "
+        >
+          <b>Finite-temperature or tension-aware strings</b><br />
+          Adding entropy or regularization changes the geometry of the path. Instead of focusing only on local maxima of likelihood,
+          the string remains closer to the typical set and often produces more realistic image transitions and smoother protein intermediates.
+        </p>
+
+        <div
+          class="has-text-centered"
+          style="
+            margin-top: 2rem;
+            border-style: solid;
+            border-color: black;
+            border-width: 0.1rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+          "
+        >
+          <b>
+            The central message is that the string method gives a practical way to probe how diffusion models organize
+            their learned landscapes, revealing not only modes and barriers, but also which transitions are realistic
+            and which are merely likely under the model.
+          </b>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="BibTeX">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">BibTeX</h2>
+          <pre><code>@article{moreau2026probing,
+  author  = {Moreau, Elio and Coeurdoux, Florentin and Ferr{\'e}, Gr{\'e}goire and Vanden-Eijnden, Eric},
+  title   = {Probing the Geometry of Diffusion Models with the String Method},
+  journal = {arXiv preprint arXiv:2602.22122},
+  year    = {2026},
+  url     = {[arxiv.org](https://arxiv.org/abs/2602.22122})
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <a class="icon-link" href="[arxiv.org](https://arxiv.org/pdf/2602.22122.pdf)" target="_blank">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a class="icon-link" href="[arxiv.org](https://arxiv.org/abs/2602.22122)" target="_blank">
+            <i class="ai ai-arxiv"></i>
+          </a>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="[creativecommons.org](http://creativecommons.org/licenses/by-sa/4.0/)"
+                >
+                  Creative Commons Attribution-ShareAlike 4.0 International License
+                </a>.
+              </p>
+              <p>
+                This webpage is adapted from
+                <a href="[github.com](https://github.com/nerfies/nerfies.github.io)">Nerfies</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
