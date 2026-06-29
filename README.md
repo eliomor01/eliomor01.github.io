@@ -1,6 +1,7 @@
-# Probing the Geometry of Diffusion Models with the String Method
+# Elio Moreau — Personal Website
 
-This repository contains the **project webpage** for the paper:
+This repository contains Elio Moreau's personal website, including a homepage,
+research index, blog, downloadable CV, and the project page for:
 
 **“Probing the Geometry of Diffusion Models with the String Method.”**
 
@@ -8,11 +9,14 @@ The site presents the paper, authors, teaser figure, and links to the arXiv vers
 
 ---
 
-## Project Overview
+## Website Overview
 
 Diffusion models define probability distributions over complex data such as images. While these models are highly successful at generation, understanding the **geometry of the learned distribution** remains challenging.
 
-This work introduces a **string-method perspective** to analyze how samples are connected through the learned distribution. Instead of simple interpolations, the method computes paths guided by the model’s score function.
+The main site introduces Elio's research interests and links to his CV. The
+papers section currently features work introducing a **string-method
+perspective** to analyze how samples are connected through a learned
+distribution.
 
 The paper studies and compares three regimes:
 
@@ -49,12 +53,16 @@ Affiliations:
 
 ```
 .
-├── index.html            # Main project webpage
+├── index.html            # Personal homepage
+├── papers.html           # Research index
+├── blog.html             # Blog index
+├── diffusion-strings.html # Diffusion Strings project page
 ├── static/
 │   ├── css/              # Stylesheets (Bulma, custom styles)
 │   ├── js/               # JavaScript utilities
-|   ├── videos/           # Videos
-│   └── images/           # Figures
+│   ├── videos/           # Research videos
+│   ├── pdfs/             # Downloadable CV
+│   └── images/           # Portrait and figures
 ```
 
 
